@@ -1,0 +1,20 @@
+name: "Helm deploy chart to Elastic Kubernetes Service (EKS)"
+description: "Executes helm or kubectl commands to deploy application to Elastic Kubernetes Service clusters which auth via aws-iam-authenticator."
+branding:
+  icon: 'anchor'  
+  color: 'blue'
+inputs:
+  command:
+    description: "kubectl or helm commands"
+    required: true
+  plugins:
+    description: "Comma-separated URLs for the Helm Plugins you need installed"
+    required: false
+outputs:
+  result:
+    description: "Output returned by your Helm or kubectl command"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.command }}
