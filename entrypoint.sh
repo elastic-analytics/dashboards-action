@@ -17,7 +17,7 @@ then
     done
 fi
 
-echo "running initconfig command(s)"
+echo "running entrypoint command(s)"
 
 response=$(sh -c " $INPUT_COMMAND")
 

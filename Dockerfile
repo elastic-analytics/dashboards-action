@@ -18,5 +18,5 @@ RUN wget https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz -O - | tar
 RUN chmod +x /usr/local/bin/helm
 
 # entry
-COPY initconfig.sh /initconfig.sh
-ENTRYPOINT ["/initconfig.sh"]:
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]:
