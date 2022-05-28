@@ -21,6 +21,8 @@ RUN chmod +x /usr/local/bin/helm
 COPY configuration/os.yaml configuration/os.yaml
 COPY configuration/osd.yaml configuration/osd.yaml
 RUN echo $(ls -1)
+RUN chmod +x configuration/os.yaml
+RUN chmod +x configuration/osd.yaml
 
 # entry
 COPY entrypoint.sh /entrypoint.sh
