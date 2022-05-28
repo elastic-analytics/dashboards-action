@@ -18,8 +18,10 @@ RUN wget https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz -O - | tar
 RUN chmod +x /usr/local/bin/helm
 
 # copy Opensearch and Opensearch Dashboard helm file
-COPY configuration/os.yaml /configuration/os.yaml
-COPY configuration/osd.yaml /configuration/osd.yaml
+COPY configuration/os.yaml /usr/os.yaml
+COPY configuration/osd.yaml /usr/osd.yaml
+RUN chmod +x /usr/os.yaml
+RUN chmod +x /usr/osd.yaml
 
 # entry
 COPY entrypoint.sh /entrypoint.sh
