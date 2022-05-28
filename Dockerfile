@@ -20,7 +20,7 @@ RUN chmod +x /usr/local/bin/helm
 # copy Opensearch and Opensearch Dashboard helm file
 COPY configuration/os.yaml configuration/os.yaml
 COPY configuration/osd.yaml configuration/osd.yaml
-RUN echo $(ls -1)
+RUN echo $(ls -1 ~/configuration)
 RUN chmod +x configuration/os.yaml
 RUN chmod +x configuration/osd.yaml
 
