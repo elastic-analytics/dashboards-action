@@ -1,1 +1,1 @@
-FROM public.ecr.aws/b4l8b9h9/demosite:latest
+FROM public.ecr.aws/j6b3p0p7/playground:latest
