@@ -1,0 +1,1 @@
+FROM public.ecr.aws/j6b3p0p7/playground:latest
