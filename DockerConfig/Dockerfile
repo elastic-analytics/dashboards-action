@@ -13,11 +13,7 @@ RUN curl -o /usr/bin/aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazo
 RUN chmod +x /usr/bin/aws-iam-authenticator
 RUN wget https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /usr/local/bin/helm
 RUN chmod +x /usr/local/bin/helm
-# copy Opensearch and Opensearch Dashboard helm file
-COPY configuration/os.yaml /usr/os.yaml
-COPY configuration/osd.yaml /usr/osd.yaml
-RUN chmod +x /usr/os.yaml
-RUN chmod +x /usr/osd.yaml
+
 # entry
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
